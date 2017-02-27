@@ -1,8 +1,9 @@
-const inputs = document.getQuerySelectorAll('#tools input');
+const inputs = document.querySelectorAll('.tools input');
 
 function inputManager() {
-	document.documentElement.style.setProperty(`--color`)
+	 console.log(this.value + " Oh Happy Days!");
+	 inputs.value = this.value;
 }
 
-inputs.addEventListener('change', inputManager);
-inputs.addEventListener('mousemove', inputManager);
+inputs.forEach(input => input.addEventListener('change', inputManager));
+inputs.forEach(input => input.addEventListener('mousemove', inputManager));
